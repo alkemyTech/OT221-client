@@ -1,10 +1,11 @@
+import AppRouter from "./router/AppRouter";
 
 
 function App() {
   return (
-    <div>
-      <h1 className="fw-bolder">Hola! Bienvenido</h1>
-    </div>
+
+      <AppRouter />
+
   );
 }
 
