@@ -2,10 +2,10 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import React, { useState} from 'react'
 import Alert from '../../services/AlertService';
 import { login } from '../../services/user/userServices';
-
+import { useNavigate } from 'react-router-dom'
 
 export const LoginForm = () => {
-
+    const navigate = useNavigate()
     const [isShowPassword, setIsShowPassword] = useState(false)
 
     const handleClickShowPassword = () => {
@@ -41,6 +41,8 @@ export const LoginForm = () => {
                 
                 console.log('valores del login',values)
                 const log=await login(values)
+                localStorege.setItem('token', JSON.stringify(log))
+                navigate('/')
                 console.log('log',log)
                 switch (log.err){
                     case 'Incorrect password':
