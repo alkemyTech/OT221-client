@@ -5,7 +5,7 @@ import { deletePrivate } from "./apiServices";
  * A confirm message is shown. If user hits confirm button, 
  *  it executes the delete request to the server.
  * 
- * If server responds with an error field, it indicates that it
+ * If server does not respond with an deleted field, it indicates that it
  *  could't find the category, so, the error message is shown, otherwise,
  *  the category is successfully deleted and the success message is 
  *  shown instead
