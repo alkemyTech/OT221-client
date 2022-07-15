@@ -49,7 +49,7 @@ export default class Alert {
     
     static confirm ({title,message},onConfirm){
     
-     Swal.fire({
+     return Swal.fire({
             title,
             text:message,
             icon: 'warning',
