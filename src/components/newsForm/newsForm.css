@@ -37,3 +37,85 @@
     height: 40px;
     font-size: 200%;
 }
+
+@media screen and (max-width: 600px) {
+    .inputs{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: -40px;
+        margin-top: 20px;
+    }
+    .inputs label{
+        font-size: 150%;
+    }
+    
+    .inputs input{
+        width: 200px;
+        font-size: 150%;
+    }
+    
+    .newsInput{
+        display: flex;
+        gap: 5px;
+    }
+    .new{
+        margin-right: 20px;
+        width: 500px;
+        margin-left: 0px;
+    }
+    .ck-editor__editable{
+        height: 300px;
+        width: 500px;
+    }
+    .contentImput{
+        width: 200px;
+    }
+    .btn {
+        width: 200px;
+        height: 40px;
+        font-size: 200%;
+    }
+    
+  }
+  
+  
+  @media screen and (max-width: 400px) {
+    .inputs{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: -40px;
+        margin-top: 20px;
+    }
+    .inputs label{
+        font-size: 150%;
+    }
+    
+    .inputs input{
+        width: 200px;
+        font-size: 150%;
+    }
+    
+    .newsInput{
+        display: flex;
+        gap: 5px;
+    }
+    .new{
+        margin-right: 20px;
+        width: 300px;
+        margin-left: 0px;
+    }
+    .ck-editor__editable{
+        height: 300px;
+        width: 300px;
+    }
+    .contentImput{
+        width: 200px;
+    }
+    .btn {
+        width: 200px;
+        height: 40px;
+        font-size: 200%;
+    }
+  }

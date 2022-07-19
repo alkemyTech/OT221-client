@@ -21,7 +21,7 @@ const RowsNew = ({
             <td className="col-3 text-center h4 "  style={{paddingTop:'35px'}}>{ new Intl.DateTimeFormat('es-Es', options).format(date) }</td>
 
             <td className="col-3 text-center h4 " style={{ paddingTop: '35px' }}>
-                <div className="d-flex d-flex justify-content-center ">
+                <div className="d-sm-inline-flex justify-content-center">
 
                 <button onClick={()=>{console.log('open edit form')}} className="btn btn-light mx-1 display-1 ">
                     <i class="bi bi-pencil-fill h3"></i>
