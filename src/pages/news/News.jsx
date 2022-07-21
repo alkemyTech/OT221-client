@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Loader } from "../../components/Loader";
 import { getPublic } from "../../services/apiServices";
-
+import { motion } from 'framer-motion';
 const News = () => {
 
     const [data,setData] = useState(null)
@@ -30,10 +30,14 @@ const News = () => {
     }
 
     return (
-
+        <motion.div
+         className=""
+         initial={{ opacity: 0 }}
+         animate={{ opacity: 1 }}
+         exit={{ opacity: 0}}
+         >
         <main className="container-fluid w-100" >
-
-            <h1 className="title text-center my-5 h-auto">Novedades</h1>
+          <h1 className="title text-center my-5 h-auto">Novedades</h1>
             <div className="container-fluid h-100 p-0 d-flex flex-column justify-content-center align-items-center py-3">
             {
                 data&&data.entries.map(news => (
@@ -48,11 +52,9 @@ const News = () => {
                 )
                     
             }
-            </div>
-         
-            
+         </div>                
         </main>
-       
+       </motion.div>
 
     );
 
