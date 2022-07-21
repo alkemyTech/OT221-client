@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Home from '../pages/home/Home.jsx';
 import NewsDetails from '../pages/NewsDetails/NewsDetails.jsx';
 
@@ -12,9 +12,11 @@ import MembersList from '../pages/members/MembersList.jsx';
 
 
 const PublicRoutes = () => {
+    const location = useLocation();
+    
     return (
         <>
-            <Routes>
+           <Routes location={location} key={location.pathname}>
                 <Route exact match path='' element={<Home />} />
                 <Route path='novedades' element={<News />} />
                 <Route path='novedades/:id' element={<NewsDetails />} />

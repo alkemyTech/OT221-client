@@ -10,7 +10,7 @@ import Alert from '../../services/AlertService';
 import { postPublic } from '../../services/apiServices';
 import { useNavigate } from 'react-router-dom';
 import { Loader } from '../../components/Loader';
-
+import { motion } from 'framer-motion';
 
 export const ContactPage = () => {
     const dispatch = useDispatch()
@@ -32,6 +32,12 @@ export const ContactPage = () => {
     })
 
     return (
+        <motion.div
+        className=""
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0}}
+        >
         <main className="layout_324af">
 
             <div>
@@ -106,6 +112,6 @@ export const ContactPage = () => {
 
             </div>
         </main>
-
+</motion.div>
     )
 }

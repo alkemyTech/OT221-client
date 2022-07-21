@@ -30,6 +30,12 @@ function Home() {
   }, []);
 
   return (
+    <motion.div
+      className=""
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0}}
+    >
     <div className="container mt-5">
       <div className="homePage">
         <div className="welcomeContainer">
@@ -57,6 +63,7 @@ function Home() {
         </div>
       </div>
     </div>
+    </motion.div>
   );
 }
 

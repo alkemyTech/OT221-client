@@ -1,6 +1,7 @@
 
 import  SignupForm  from "../../components/SignUpForm/SignUpForm"
 import teamWorkImage from '../../img/Login/team-work.jpg'
+import { motion } from 'framer-motion'
 
 const RegisterPage = () => {
 
@@ -13,6 +14,14 @@ const RegisterPage = () => {
     
 
     return (
+        <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+        duration: 0.8,
+        delay: 0.5,
+        ease: [0, 0.71, 0.2, 1.01]}}
+        >
         <main className='d-flex flex-column flex-lg-row justify-content-center align-items-center ' style={{height:'fit-content'}}>
             <section className="d-flex flex-column  align-items-center justify-content-center   w-100" style={{height:'70vh'}} >
                         <div className="w-75 m-auto " >
@@ -29,6 +38,7 @@ const RegisterPage = () => {
                 <img className='img-fluid' style={imgStyles} src={teamWorkImage}  alt="team-work" />
             </section>
         </main>
+        </motion.div>
       )
 
 
