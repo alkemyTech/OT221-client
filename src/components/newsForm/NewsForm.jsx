@@ -72,6 +72,7 @@ function NewsForm({ patch }) {
                         onChange={(e) =>  updateField(e)} />
                 </div>
             </div>
+            <div className='new'>
             <CKEditor 
                 className='contentInput'
                 editor={ClassicEditor}
@@ -82,6 +83,7 @@ function NewsForm({ patch }) {
                     setNewsFormData({...newsFormData, content: data })
                 }}
             />
+            </div>
             <button
                 className="btn btn-primary"
                 type='submit'

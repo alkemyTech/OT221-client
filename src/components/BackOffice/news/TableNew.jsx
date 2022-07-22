@@ -22,9 +22,8 @@ const deleteNews = (id,name) => {
         getNews()
     }, [])
     return (
-        <div style={{ padding: '3rem' }}>  
-            <h1 style={{ textAlign:'center', marginBottom: '7rem', fontSize:'3rem' }}> Novedades </h1>
-            <table class="table">
+        <div class="table-responsive-md">
+        <table class=" table table-dark">
                 <thead>
                     <tr>
                         <th scope="col" className="text-center h2">Nombre</th>

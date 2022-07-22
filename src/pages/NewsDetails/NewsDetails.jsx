@@ -44,13 +44,13 @@ const NewsDetails = ({imgHeight = '40rem'}) => {
 
 
   return (
-    <main className='container-fluid h-100 p-0 d-flex justify-content-center align-items-center bg-white '>
+    <table className='table-respondive-md'>
         {  
           data 
             ?  <NewsDetailCard data={data} imgStyles={{ imgStyles }}/>
             : error && <ErrorSign error={error} />
         }
-    </main>
+    </table>
   )
 }
 
