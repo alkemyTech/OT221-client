@@ -14,8 +14,8 @@ export default class Alert {
 
     //Button colors follow UI guidelines, icons colors are defaulted from the sweetAlert2 package
     
-    static buttonConfirmColor = '#0038FF'
-    static buttonCancelColor =  '#ff0000'
+    static buttonConfirmColor = '#2378d3'
+    static buttonCancelColor =  '#DB5752'
     
     
     static success({title,message}){
@@ -28,7 +28,7 @@ export default class Alert {
     }
     
     static error({title,message}){
-        return Swal.fire({
+        Swal.fire({
             title,
             text:message,
             confirmButtonColor: this.buttonConfirmColor,
@@ -64,7 +64,7 @@ export default class Alert {
     }
     
     
-    static confirmRequest({title,message},request,onSuccess){
+    static confirmRequest({title,message}, request, onSuccess){
         Swal.fire({
             title,
             text:message,
@@ -76,16 +76,14 @@ export default class Alert {
             confirmButtonColor: this.buttonConfirmColor,
             showLoaderOnConfirm: true,
             preConfirm: () => {
-              return request
+              return request()
                 .then(response => {
-                  if (!response.ok) {
-                    throw new Error(response.statusText)
-                  }
-                  return response.json()
+                  return response.data
                 })
                 .catch(error => {
+                  console.log(error)
                   Swal.showValidationMessage(
-                    `No se pudo realizar la solicitud: ${error}`
+                    `No se pudo realizar la solicitud: ${error.response.data.message}`
                   )
                   Swal.getConfirmButton().textContent ='Reintentar'
                 })

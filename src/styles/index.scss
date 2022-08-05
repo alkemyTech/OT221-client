@@ -1,27 +1,28 @@
 @import './base/override';
-
 @import "../../node_modules/bootstrap/scss/bootstrap";
-
 @import './base/base';
-@import './components/signUp.scss';
+
 
 @import './base/mixins';
 
 
-//pages
-//@import '../pages/login/loginPage.module';
-@import '../pages/backOffice/backOffice.module';
-@import './pages/testimonials/testimonials.scss';
 
-//components
-//@import '../components/login/loginForm.module';
-@import './components/footer';
+// //components
+@import './components/testimonialCard';
 @import './components/carousel';
-@import './componentes/textArea';
-@import './componentes/textInput';
+@import './components/cardCarousel';
+@import './components/footer';
+@import './components/textArea';
+@import './components/textInput';
+@import './components/AlertStyles';
+@import './components//memberList/cardMember';
+@import './components/categories/categoriesForm';
 
-@import './pages/contact/contactPage';
+
+
+//pages
 @import './pages/activityDetail/activityDetailPage';
-
-@import './components/AlertStyles.scss'
-
+@import './pages/contact/contactPage';
+@import './pages/backoffice/backoffice';
+@import './pages/news/news';
+@import './pages/newsdetails/newsdetails';
