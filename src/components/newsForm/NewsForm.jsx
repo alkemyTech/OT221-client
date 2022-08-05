@@ -30,6 +30,55 @@ function NewsForm({ patch, setShowAMForm, getNews }) {
     }
   }, []);
 
+<<<<<<< HEAD
+    return (
+        <div className="newsForm">
+            <h1>{patch ? "Update News" : "Create News"}</h1>
+            <div className="inputs">
+                <div className="newsTitle newsInput">
+                    <label>Title</label>
+                    <input
+                        type="text"
+                        className='titleInput'
+                        value={newsFormData.title}
+                        name='title'
+                        onChange={(e) =>  updateField(e)} />
+                </div>
+                <div className="newsImage newsInput">
+                    <label>Image</label>
+                    <input
+                        value={newsFormData.image}
+                        type="file"
+                        name='image'
+                        onChange={(e) =>  updateField(e)}/>
+                </div>
+                <div className="newsCategory newsInput">
+                    <label>Category</label>
+                    <input
+                        type="text"
+                        className='categoryInput'
+                        value={newsFormData.category}
+                        name='category'
+                        onChange={(e) =>  updateField(e)} />
+                </div>
+            </div>
+            <div className='new'>
+            <CKEditor 
+                className='contentInput'
+                editor={ClassicEditor}
+                data={newsFormData.content}
+                value={newsFormData.content}
+                onChange={(e, editor) => {
+                    const data = editor.getData()
+                    setNewsFormData({...newsFormData, content: data })
+                }}
+            />
+            </div>
+            <button
+                className="btn btn-primary"
+                type='submit'
+                onClick={(e) => { onSubmit(e) }}>{patch ? "Update News" : "Create News"}</button>
+=======
   const onSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -86,6 +135,7 @@ function NewsForm({ patch, setShowAMForm, getNews }) {
             name="name"
             onChange={(e) => setNewName(e.target.value)}
           />
+>>>>>>> main
         </div>
         <div className="newsImage newsInput">
           <label>Image</label>

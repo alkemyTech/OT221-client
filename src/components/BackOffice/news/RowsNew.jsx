@@ -26,7 +26,7 @@ const RowsNew = ({
             <td className="col-3 text-center h4 " style={{ paddingTop: '35px' }}>{createdAt}</td>
 
             <td className="col-3 text-center h4 " style={{ paddingTop: '35px' }}>
-                <div className="d-flex d-flex justify-content-center ">
+                <div className="d-sm-inline-flex justify-content-center">
 
                     <button onClick={() => {setNewData({ id: id, name: name, image: image, content: content, type: type }); setShowAMForm(true) }} className="btn btn-light text-white mx-1 display-1 ">
                         <i class="bi bi-pencil-fill h3"></i>
