@@ -1,0 +1,49 @@
+.newsdetail{
+
+  width: 100vw;
+  margin: 2rem 0;
+
+  &__image-container{
+    height: 35rem;
+
+    @include responsive($small){
+      width: 43rem;
+      margin: 0 auto;
+    }
+
+    @include responsive($medium){
+      width: 55rem;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+    }
+
+    @include responsive($large){
+      width: 65rem;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+    }
+
+  }
+
+  &__image{
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__text{
+
+    margin-top: 2rem;
+
+    @include responsive($medium){
+      padding: 0 4rem;
+    }
+
+    @include responsive($large){
+      max-width: 110rem;
+      margin: 0 auto;
+    }
+  }
+
+}
