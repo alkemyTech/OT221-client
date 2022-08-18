@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Alert from "../../../services/AlertService";
 import { deletePrivate } from "../../../services/apiServices";
-import { deleteCategory } from "../../../store/slices/categories/getAllCategories";
 import CategoriesForm from "../../categories/CategoriesForm";
 import RowsCategory from "./RowsCategory";
 
