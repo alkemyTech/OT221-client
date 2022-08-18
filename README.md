@@ -2,6 +2,7 @@
 nuevo texto
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 un texto con el readme cambiado
+otro texto con el readme cambiado
 ## Available Scripts
 
 In the project directory, you can run:
